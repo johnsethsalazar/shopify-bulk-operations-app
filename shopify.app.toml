@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "6c466b1a91fd7be58c4f626cb7684fe5"
+name = "bulk-new"
+handle = "bulk-new-4"
+application_url = "https://thriller-million-peninsula-brake.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "ohsolutions.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://thriller-million-peninsula-brake.trycloudflare.com/auth/callback",
+  "https://thriller-million-peninsula-brake.trycloudflare.com/auth/shopify/callback",
+  "https://thriller-million-peninsula-brake.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
