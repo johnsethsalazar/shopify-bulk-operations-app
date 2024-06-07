@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react";
 import { Button, Card, Layout, Page, Text } from "@shopify/polaris";
 import React from "react";
+import { DropZoneExample } from "~/components/customDropZone";
 
 type Props = {};
 
@@ -21,6 +22,14 @@ const Index = (props: Props) => {
             <Link to="/app/exportform">
               <Button variant="primary">New Export</Button>
             </Link>
+          </Card>
+        </Layout.Section>
+        <Layout.Section>
+          <Card>
+            <Text as="h4" variant="headingMd">
+              Import
+            </Text>
+            <DropZoneExample />
           </Card>
         </Layout.Section>
       </Layout>

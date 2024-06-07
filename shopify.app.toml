@@ -3,7 +3,7 @@
 client_id = "6c466b1a91fd7be58c4f626cb7684fe5"
 name = "bulk-new"
 handle = "bulk-new-4"
-application_url = "https://thriller-million-peninsula-brake.trycloudflare.com"
+application_url = "https://za-momentum-settlement-punishment.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://thriller-million-peninsula-brake.trycloudflare.com/auth/callback",
-  "https://thriller-million-peninsula-brake.trycloudflare.com/auth/shopify/callback",
-  "https://thriller-million-peninsula-brake.trycloudflare.com/api/auth/callback"
+  "https://za-momentum-settlement-punishment.trycloudflare.com/auth/callback",
+  "https://za-momentum-settlement-punishment.trycloudflare.com/auth/shopify/callback",
+  "https://za-momentum-settlement-punishment.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
