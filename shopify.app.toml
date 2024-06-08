@@ -3,7 +3,7 @@
 client_id = "6c466b1a91fd7be58c4f626cb7684fe5"
 name = "bulk-new"
 handle = "bulk-new-4"
-application_url = "https://short-really-senior-wheel.trycloudflare.com"
+application_url = "https://gst-correctly-water-colony.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://short-really-senior-wheel.trycloudflare.com/auth/callback",
-  "https://short-really-senior-wheel.trycloudflare.com/auth/shopify/callback",
-  "https://short-really-senior-wheel.trycloudflare.com/api/auth/callback"
+  "https://gst-correctly-water-colony.trycloudflare.com/auth/callback",
+  "https://gst-correctly-water-colony.trycloudflare.com/auth/shopify/callback",
+  "https://gst-correctly-water-colony.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

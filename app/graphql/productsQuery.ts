@@ -1,5 +1,4 @@
-export const productsQuery =
-`{
+export const productsQuery = `{
     products {
       edges {
         node {
@@ -16,4 +15,4 @@ export const productsQuery =
         }
       }
     }
-  }`
+  }`;
