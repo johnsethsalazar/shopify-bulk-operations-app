@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react";
-import { Button, Card, Layout, Page, Text } from "@shopify/polaris";
+import { Box, Button, Card, Layout, Page, Text } from "@shopify/polaris";
 import React from "react";
+import { Placeholder } from "~/components/Placeholder";
 import { DropZoneExample } from "~/components/customDropZone";
 
 type Props = {};
@@ -30,6 +31,13 @@ const Index = (props: Props) => {
               Import
             </Text>
             <DropZoneExample />
+          </Card>
+        </Layout.Section>
+        <Layout.Section>
+          <Card>
+            <Box background="bg-fill-info" borderRadius="100">
+              <Placeholder label="You have 0 scheduled jobs" />
+            </Box>
           </Card>
         </Layout.Section>
       </Layout>
