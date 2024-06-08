@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react";
 import { Box, Button, Card, Layout, Page, Text } from "@shopify/polaris";
 import React from "react";
+import { CustomCalledOut } from "~/components/CustomCalledOut";
 import { Placeholder } from "~/components/Placeholder";
 import { DropZoneExample } from "~/components/customDropZone";
 
@@ -39,6 +40,9 @@ const Index = (props: Props) => {
               <Placeholder label="You have 0 scheduled jobs" />
             </Box>
           </Card>
+        </Layout.Section>
+        <Layout.Section>
+          <CustomCalledOut title={""} illustration={""} primaryAction={""} primaryActionUrl={""} children={undefined} />
         </Layout.Section>
       </Layout>
     </Page>
