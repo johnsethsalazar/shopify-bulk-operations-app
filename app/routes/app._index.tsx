@@ -17,10 +17,9 @@ const Index = (props: Props) => {
             <Text as="h4" variant="headingMd">
               Heading
             </Text>
-            <br/>
-            <Text as="h6">
-              You will be able to select the particular data 
-            </Text>
+            <br />
+            <Text as="h6">You will be able to select the particular data</Text>
+            <br />
             <Link to="/app/exportform">
               <Button variant="primary">New Export</Button>
             </Link>
@@ -31,6 +30,7 @@ const Index = (props: Props) => {
             <Text as="h4" variant="headingMd">
               Import
             </Text>
+            <br />
             <DropZoneExample />
           </Card>
         </Layout.Section>
@@ -42,7 +42,17 @@ const Index = (props: Props) => {
           </Card>
         </Layout.Section>
         <Layout.Section>
-          <CustomCalledOut title={""} illustration={""} primaryAction={""} primaryActionUrl={""} children={undefined} />
+          <Text as="h4" variant="headingMd">
+            Help
+          </Text>
+          <br />
+          <CustomCalledOut
+            title={"Support"}
+            illustration={"https://cdn.pixabay.com/photo/2015/12/22/04/00/edit-1103599_640.png"}
+            primaryAction={"Contact Support"}
+            primaryActionUrl={"https://ohsolutions.netlify.app/"}
+            children={"Contact us if you have any inquiries or concerns."}
+          />
         </Layout.Section>
       </Layout>
     </Page>
