@@ -3,7 +3,7 @@
 client_id = "6c466b1a91fd7be58c4f626cb7684fe5"
 name = "bulk-new"
 handle = "bulk-new-4"
-application_url = "https://tf-likes-soonest-pittsburgh.trycloudflare.com"
+application_url = "https://speaks-goes-eco-present.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://tf-likes-soonest-pittsburgh.trycloudflare.com/auth/callback",
-  "https://tf-likes-soonest-pittsburgh.trycloudflare.com/auth/shopify/callback",
-  "https://tf-likes-soonest-pittsburgh.trycloudflare.com/api/auth/callback"
+  "https://speaks-goes-eco-present.trycloudflare.com/auth/callback",
+  "https://speaks-goes-eco-present.trycloudflare.com/auth/shopify/callback",
+  "https://speaks-goes-eco-present.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
