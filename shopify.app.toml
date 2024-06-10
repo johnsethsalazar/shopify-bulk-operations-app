@@ -3,7 +3,7 @@
 client_id = "6c466b1a91fd7be58c4f626cb7684fe5"
 name = "bulk-new"
 handle = "bulk-new-4"
-application_url = "https://speaks-goes-eco-present.trycloudflare.com"
+application_url = "https://specific-remember-biology-tree.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://speaks-goes-eco-present.trycloudflare.com/auth/callback",
-  "https://speaks-goes-eco-present.trycloudflare.com/auth/shopify/callback",
-  "https://speaks-goes-eco-present.trycloudflare.com/api/auth/callback"
+  "https://specific-remember-biology-tree.trycloudflare.com/auth/callback",
+  "https://specific-remember-biology-tree.trycloudflare.com/auth/shopify/callback",
+  "https://specific-remember-biology-tree.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

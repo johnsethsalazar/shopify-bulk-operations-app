@@ -68,13 +68,12 @@ const ExportResult = () => {
   useEffect(() => {
     if (fetcher.data) {
       setPollingData(fetcher.data as bulkOperation);
-    }
-    
-    const { status } = fetcher.data as bulkOperation;
+      const { status } = fetcher.data as bulkOperation;
 
-    if (status === "COMPLETED") {
-      setShouldPoll(false);
-      console.log("------polling stopped------");
+      if (status === "COMPLETED") {
+        setShouldPoll(false);
+        console.log("------polling stopped------");
+      }
     }
   }, [fetcher.data]);
 
