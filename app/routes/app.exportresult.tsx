@@ -15,33 +15,25 @@ type bulkOperation = {
 
 export const loader: LoaderFunction = async ({ request }) => {
   const { admin } = await authenticate.admin(request);
-  const response = await admin.graphql(`
-    #graphQl
-      mutation {
-          bulkOperationRunQuery(
-      query: """
-       ${productsQuery}
-   """
-      ) {
-      bulkOperation {
-        id
-        status
-        query
-        rootObjectCount
-        type
-        partialDataUrl
-        objectCount
-        fileSize
-        createdAt
-        url
-      }
-      userErrors {
-        field
-        message
-      }
-    }
-  } 
-  `);
+
+  const response = await admin.graphql(
+    `#graphql
+    query {
+  currentBulkOperation {
+    id
+    status
+    errorCode
+    createdAt
+    completedAt
+    objectCount
+    fileSize
+    url
+    partialDataUrl
+  }
+}
+    `,
+  );
+
   if (response.ok) {
     console.log("------status export result --------");
     const data = await response.json();

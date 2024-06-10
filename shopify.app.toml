@@ -3,7 +3,7 @@
 client_id = "6c466b1a91fd7be58c4f626cb7684fe5"
 name = "bulk-new"
 handle = "bulk-new-4"
-application_url = "https://respect-clan-selection-blade.trycloudflare.com"
+application_url = "https://tf-likes-soonest-pittsburgh.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://respect-clan-selection-blade.trycloudflare.com/auth/callback",
-  "https://respect-clan-selection-blade.trycloudflare.com/auth/shopify/callback",
-  "https://respect-clan-selection-blade.trycloudflare.com/api/auth/callback"
+  "https://tf-likes-soonest-pittsburgh.trycloudflare.com/auth/callback",
+  "https://tf-likes-soonest-pittsburgh.trycloudflare.com/auth/shopify/callback",
+  "https://tf-likes-soonest-pittsburgh.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
