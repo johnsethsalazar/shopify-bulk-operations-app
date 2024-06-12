@@ -1,8 +1,10 @@
 import { LoaderFunction, json } from "@remix-run/node";
 import { useFetcher, useLoaderData } from "@remix-run/react";
 import { Banner, Card, Layout, Page, ProgressBar } from "@shopify/polaris";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { authenticate } from "~/shopify.server";
+import Papa from "papaparse";
 
 type bulkOperation = {
   id: String;
@@ -50,6 +52,7 @@ const ExportResult = () => {
 
   const [pollingData, setPollingData] = useState(data);
   const [shouldPoll, setShouldPoll] = useState(true);
+  const [readyUrl, setReadyUrl] = useState("");
 
   useEffect(() => setPollingData(data), [data]);
 
@@ -68,8 +71,8 @@ const ExportResult = () => {
   useEffect(() => {
     if (fetcher.data) {
       setPollingData(fetcher.data as bulkOperation);
-      const { status } = fetcher.data as bulkOperation;
-
+      const { status, url } = fetcher.data as bulkOperation;
+      setReadyUrl(url as string);
       if (status === "COMPLETED") {
         setShouldPoll(false);
         console.log("------polling stopped------");
@@ -77,8 +80,40 @@ const ExportResult = () => {
     }
   }, [fetcher.data]);
 
-  const downloadData = () => {
-    console.log("download");
+  const downloadData = async () => {
+    try {
+      console.log("download");
+
+      const response = await axios.get(readyUrl);
+
+      const lines = response.data.split("\n");
+
+      const jsonArray = lines
+        .map((line: any) => {
+          try {
+            return JSON.parse(line);
+          } catch (err) {
+            console.log("Error parsing the data", err);
+            return null;
+          }
+        })
+        .filter(Boolean);
+
+      const csvData = Papa.unparse(jsonArray);
+
+      const blob = new Blob([csvData], { type: "text/csv;charset=utf-8" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+
+      link.download = "output.csv";
+
+      document.body.appendChild(link);
+      link.click();
+
+      document.body.removeChild(link);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   console.log(data, "data");
