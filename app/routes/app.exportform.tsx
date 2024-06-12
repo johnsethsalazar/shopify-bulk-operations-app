@@ -14,6 +14,7 @@ import {
   ResourceListExample,
   itemsResource,
 } from "~/components/CustomResourceList";
+import handleBack from "~/components/handleBack";
 import { productsQuery } from "~/graphql/productsQuery";
 import { authenticate } from "~/shopify.server";
 
@@ -102,7 +103,7 @@ const ExportForm = (props: Props) => {
     <Page>
       <ui-title-bar title="New Export">
         <button variant="breadcrumb">Home</button>
-        <button onClick={() => {}}>Back</button>
+        <button onClick={handleBack}>Back</button>
         <button variant="primary" onClick={createExport}>
           Export
         </button>

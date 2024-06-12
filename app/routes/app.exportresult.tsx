@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { authenticate } from "~/shopify.server";
 import Papa from "papaparse";
 
+import handleBack from "~/components/handleBack";
+
 type bulkOperation = {
   id: String;
   url: String;
@@ -117,12 +119,13 @@ const ExportResult = () => {
   };
 
   console.log(data, "data");
+
   return (
     <Page>
       <ui-title-bar title="New Export">
         <button variant="breadcrumb">Bulky</button>
-        <button onClick={() => {}}>Back</button>
-        <button variant="primary">Download Exported File</button>
+        <button onClick={handleBack}>Back</button>
+        {/* <button variant="primary" onClick={downloadData}>Download Exported File</button> */}
       </ui-title-bar>
       {pollingData.status === "RUNNING" && (
         <Layout>
